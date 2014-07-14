@@ -1,6 +1,6 @@
 # README #
 
-Requires MeteorJs, aswell as access to the npm package manager for meteorite.
+Requires MeteorJs, as well as access to the npm package manager for meteorite.
 
 ### What is this repository for? ###
 
