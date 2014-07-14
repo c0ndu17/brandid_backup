@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "iron-router": {},
+    "accounts-merge": {},
+    "accounts-entry": {},
+    "contact": {},
+    "captcha": {},
+    "iron-router-active": {},
+    "collection2": {},
+    "glyphicons-halflings": {},
+    "bootstrap-3": {},
+    "autoform": {}
+  }
+}

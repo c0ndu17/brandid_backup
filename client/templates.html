@@ -1,0 +1,388 @@
+<template name="Home">
+<h2 align="left">Welcome to Elementum.</h2>
+<hr>
+{{>Carousel}}
+<hr>
+<div class="row row-centered">
+    <!-- Three columns of text below the carousel -->
+    <h3 align="left"><u>Featured Designs:</u></h3>
+    <br>
+    <div class="row row-centered" style="margin:0 auto">
+        <div class="col-xs-4 col-centered col-min ">
+            <div class="item2 item2-col">
+                <div class="content">
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h4>Heading</h4>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-centered col-min ">
+            <div class="item2 item2-col">
+                <div class="content">
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h4>Heading</h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-centered col-min">
+            <div class="item2 item2-col">
+                <div class="content">
+                    <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h4>Heading</h4>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.</p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+</template>
+
+<template name="Carousel">
+<div class="row row-centered">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="item active" style="background-image:url(/images/Elegant_Background-1.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+                <div class="carousel-caption">
+                    {{>CarouselSlideOne}}
+                </div>
+            </div>
+            <div class="item" style="background-image:url(/images/Elegant_Background-2.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+                <div class="carousel-caption">
+                    {{>CarouselSlideTwo}}
+                </div>
+            </div>
+            <div class="item" style="background-image:url(/images/Elegant_Background-3.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+                <div class="carousel-caption">
+                    {{>CarouselSlideThree}}
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+</template>
+
+<template name="CarouselSlideOne">
+<div class="row row-centered">
+    <h4 class="lead">Original designs by some of South Africas freshest talent.</h4>
+    <hr>
+    <h5>Connecting university graphics designers with brands in need of a revamp, or maybe just a touch up.</h5>
+    <br>
+    <a type="button" href="{{pathFor 'About'}}" class="btn btn-success">Learn</a>
+</div>
+</template>
+
+<template name="CarouselSlideTwo">
+<div class="row row-centered">
+    <br>
+    <p class="lead">Do you know what we do?</p>
+    <blockquote style="border-width:0px">
+        <small>It's one click away</small>
+    </blockquote>
+    <div class="row row-centered" style="display:inline">
+        <a type="button" href="{{pathFor 'About'}}" class="btn btn-success">Learn</a>
+    </div>
+</div>
+
+</template>
+<template name="CarouselSlideThree">
+<div class="row row-centered">
+</div>
+
+</template>
+
+<template name="Search">
+<h1>Find the right person for you.</h1>
+<hr>
+<div class="row row-centered">
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 1" href="//placehold.it/1024x768"><img class="thumbnail img-responsive" src="//placehold.it/600x350"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 2" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/2255EE"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 3" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/449955/FFF"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 4" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/992233"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 5" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/2255EE"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 6" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/449955/FFF"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 8" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/777"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 9" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/992233"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 10" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/EEE"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 11" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/449955/FFF"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 12" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/DDD"></a></div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-4 col-xs-6 col-centered col-min">
+        <div class="item2">
+            <div class="content">
+                <a title="Image 13" href="#"><img class="thumbnail img-responsive" src="//placehold.it/600x350/992233"></a></div>
+        </div>
+    </div>
+</div>
+</template>
+
+<template name="Designer">
+<div class="row">
+    <div class="col-md-5 col-md-offset-3">
+        <h1>Designer</h1>
+    </div>
+</div>
+</template>
+<template name="About">
+<div class="row center">
+    <!--TODO: DB CALL TO RANDOM IMAGE_SET's -->
+    <div class="alert alert-dismissable alert-info">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Heads up!</strong>
+        <p>As you read on, have a look at the collections. They are randomly pulled from the database.</p>
+        <p>They made the back button for a reason :)</p>
+    </div>
+    <h1>About</h1>
+    <hr>
+    <h2>The Mission</h2>
+    <hr>
+    <h2>What do we do?</h2>
+    <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+        <li class="active"><a href="#Student" data-toggle="tab">Student</a></li>
+        <li class=""><a href="#Business" data-toggle="tab">Business/Startup/Individual</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="Student">
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        </div>
+        <div class="tab-pane fade" id="Business">
+            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <h2>Can this help you?</h2>
+    <hr class="featurette-divider">
+    <h2>Who are we?</h2>
+    <p>Superheroes. yes.</p>
+    <hr class="featurette-divider">
+    <h3>You've read this far...</h3>
+    <br>
+    <p class="lead"> As a final note,</p>
+    <p>We asked you earlier to look through the collections, as you read down. We asked this because we wouldn't you to see some of the potential thats here. As a student, you could have been one of them, if you have the potential give it a go. Its worth the effort.</p>
+    <p> As someone seeking something designed:</p>
+    <blockquote>
+        <h3>"Quality is remembered long after the price is forgotten"</h3>
+        <small>Gucci's family motto</small>
+    </blockquote>
+</div>
+</template>
+<template name="Contact">
+<div class="jumbotron" style="text-align:left;background-image:url(/images/Elegant_Background-1.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+
+    <h1 >Your input is important to us.</h1>
+    <p class="lead"> Tell us what's on your mind.</p>
+</div>
+
+<div class="row" style="padding:5% 10% 1% 10%;">
+    <div class="col-sm-4">
+        <h3>Drop us a line!</h3>
+        <hr>
+        <address>
+            <strong>Email:</strong> <a href="mailto:GPDev@BrandId.com">GPDev@BrandId.com</a><br><br><!--TODO -->
+        </address>
+    </div>
+
+    <div class="col-sm-8 contact-form">
+        <form id="contact" method="post" class="form" role="form">
+            <div class="row">
+                <div class="col-xs-6 col-md-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+                </div>
+                <div class="col-xs-6 col-md-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+                </div>
+            </div>
+            <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+            <br />
+            <div class="row">
+                {{> captcha}}
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-12 col-md-12 form-group">
+                    <button class="btn btn-primary pull-left"  type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</template>
+<template name="UserForm">
+<div class="row row-centered">
+    <div class="col-md-6 col-centered">
+        <form class="form-horizontal" action="" method="POST">
+            <fieldset>
+                <div id="legend">
+                    <legend class="">Register</legend>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">Username</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username" placeholder="" class="form-control">
+                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="email">E-mail</label>
+                    <div class="controls">
+                        <input type="email" id="email" name="email" placeholder="" class="form-control">
+                        <p class="help-block">Please provide your E-mail</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password" placeholder="" class="form-control">
+                        <p class="help-block">Password should be at least 6 characters</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                    <div class="controls">
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control">
+                        <p class="help-block">Please confirm password</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button class="btn btn-success">Register</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div> 
+</div>
+</template>
+
+<template name="insertUserForm">
+{{> quickForm collection="User_Data" id="insertUserForm" type="insert" omitFields="_id,createdAt,services,emails.$.verified"}}
+</template>
+
+
+<template name="notFound">
+<div class="row">
+    <div class="col-md-5 col-md-offset-3">
+        <h1>404</h1>
+        <p>Unfortunately for you this page does not exist. Return</p> <!-- TODO: Add return to prev page -->
+    </div>
+</div>
+</template>

@@ -1,0 +1,224 @@
+html {
+    background-color:#000;
+    background-image:url('/images/Elegant_Background-8.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display:table;
+}
+html,
+body {
+    text-align: center;
+    height:100%;
+    width:100%;
+    background-color:transparent;
+}
+body{
+    display:table-cell;
+    padding-top:75px;
+    vertical-align:middle;
+}
+.navshadow {
+    -webkit-box-shadow: -1px 4px 5px 0px rgba(30, 30, 30, 0.91);
+    -moz-box-shadow:    -1px 4px 5px 0px rgba(30, 30, 30, 0.91);
+    box-shadow:         -1px 4px 5px 0px rgba(30, 30, 30, 0.91);
+}
+.wrapper {
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto;
+    display: table;
+    padding: 0 2% 0 2%;
+}
+.wrapper2 {
+    display:table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    /*
+    margin: 0 auto;
+    width:100%;
+    display: inline-block;  
+    font-size: initial;*/
+    zoom:1;
+}
+
+.wrapper2
+.container {
+    background-color:#fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.captcha-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+.fixed-top{
+    position:fixed;
+    top:0;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 50px;
+}
+#footer {
+    margin-top: 60px;
+}
+
+#footer a {
+    color:#efefef;
+}
+.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+.cont-pad{
+    padding: 30px 30px 30px 30px;
+}
+
+.stitched {
+    padding-top: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #414141;
+    line-height: 1.3em;
+    border-top: 1px dashed #fff;
+    border-right: 1px dashed #fff;
+    border-left: 1px dashed #fff;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0 0 0 4px #414141, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+    height:100%;
+}
+#open-popup {padding:20px}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 40px;
+    width: auto;
+    max-width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+.item{
+    background: #633;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 0px;
+}
+.rempop a:hover {
+    cursor: pointer;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-top {
+    vertical-align:top;
+}
+.col-middle {
+    vertical-align:middle;
+}
+.col-bottom {
+    vertical-align:bottom;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
+}
+
+/* visual styles */
+.container{
+    max-width:99%
+}
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+
+.item2 {
+    width:100%;
+    height:100%;
+    border:1px solid #cecece;
+    padding:16px 8px;
+}
+.item2-col{
+    background:#ededed;
+    background:-webkit-gradient(linear, left top, left bottom,color-stop(0%, #f4f4f4), color-stop(100%, #ededed));
+    background:-moz-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+    background:-ms-linear-gradient(top, #f4f4f4 0%, #ededed 100%);
+
+}
+/* content styles */
+.item2 {
+    display:table;
+}
+
+/* content styles */
+.content {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+/*TODO: Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .btn-responsive {
+        padding:2px 4px;
+        font-size:80%;
+        line-height: 1;
+        border-radius:3px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .btn-responsive {
+        padding:4px 9px;
+        font-size:90%;
+        line-height: 1.2;
+    }
+}
+
