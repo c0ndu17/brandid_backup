@@ -1,7 +1,11 @@
 {
-    "name": "BrandIDHeroku"
-   ,"version":"0.0.1"
-   ,"engines":{
+    "name": "BrandIDHeroku",
+    "version":"0.0.1",
+    "engines":{
         "node":"0.8.23"
-   }
+    },
+    "dependencies": {
+        "fibers": "1.0.0"
+    }
+
 }
