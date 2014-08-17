@@ -1,13 +1,13 @@
 html {
     background-color:#000;
-    background-image:url('/images/Elegant_Background-8.jpg');
+    /*background-image:url('/images/Elegant_Background-8.jpg');
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
     display:table;
 }
 html,
@@ -15,13 +15,39 @@ body {
     text-align: center;
     height:100%;
     width:100%;
-    background-color:transparent;
+    background-color:#ff6600;
 }
 body{
     display:table-cell;
     padding-top:75px;
     vertical-align:middle;
 }
+.no-js .defer-image {
+    display: none;
+}
+
+.defer-image > img {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.defer-image.is-loading {
+    position: relative;
+    background: #EEE;
+}
+
+/* Image aspect ratios - % is relative to width. */
+.image-ratio\:1x2   > div { padding-top: 200%; }
+.image-ratio\:9x16  > div { padding-top: 177.777%; }
+.image-ratio\:2x3   > div { padding-top: 150%; }
+.image-ratio\:3x4   > div { padding-top: 133.333%; }
+.image-ratio\:1x1   > div { padding-top: 100%; }
+.image-ratio\:4x3   > div { padding-top: 75%; }
+.image-ratio\:3x2   > div { padding-top: 66.66%; }
+.image-ratio\:16x9  > div { padding-top: 56.25%; }
+.image-ratio\:2x1   > div { padding-top: 50%; }
+
 .navshadow {
     -webkit-box-shadow: -1px 4px 5px 0px rgba(30, 30, 30, 0.91);
     -moz-box-shadow:    -1px 4px 5px 0px rgba(30, 30, 30, 0.91);
@@ -33,6 +59,16 @@ body{
     margin: 0 auto;
     display: table;
     padding: 0 2% 0 2%;
+}
+.jumbocontact {
+    text-align:left;
+    background-image:url(/images/re_Elegant_Background-7.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:25% 25%;
+    -webkit-box-shadow: inset 0px 0px 16px 0px rgba(50, 50, 50, 0.85);
+    -moz-box-shadow:    inset 0px 0px 16px 0px rgba(50, 50, 50, 0.85);
+    box-shadow:         inset 0px 0px 16px 0px rgba(50, 50, 50, 0.85);
 }
 .wrapper2 {
     display:table-cell;
@@ -139,7 +175,10 @@ body{
     /* reset the text-align */
     text-align:left;
     /* inline-block space fix */
-    margin-right:-4px;
+    margin-right:2px;
+    margin-left:2px;
+    padding-right:2px;
+    padding-left:2px;
 }
 .col-fixed {
     /* custom width */
@@ -195,12 +234,28 @@ body{
     vertical-align:middle;
     text-align:center;
 }
+.input-right-icon{
+    position:relative;
+
+
+}
+.input-right-icon input {
+    padding-right: 30px;
+}
+.input-right-icon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+.carousel-inner{
+    min-height: 300px;
+    min-width: 250px;
+}
 
 /*TODO: Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
     #footer {
-        margin-left: -20px;
-        margin-right: -20px;
         padding-left: 20px;
         padding-right: 20px;
     }

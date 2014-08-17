@@ -3,10 +3,16 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 Router.map(function() {
-    this.route('Home', {path: '/'});
-    this.route('Search');
-    this.route('Designer');
-    this.route('About');
-    this.route('Contact');
-    this.route('UserForm');
+    this.route('home', {path: '/'});
+    this.route('search');
+    this.route('designer');
+    this.route('about');
+    this.route('contact');
+    this.route('userForm');
+    this.route('forgotPassword');
+    this.route('signIn');
+    this.route('signUp');
+    this.route('dashboard');
+    this.route('TandC');
+    this.route('privacypol');
 });

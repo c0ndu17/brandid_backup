@@ -3,7 +3,7 @@
     <meta name="description" content="Bringing together the elements">
     <meta name="author" content="George Phillips">
 
-    <title>BrandId</title>
+    <title>Elementum</title>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,7 +28,7 @@
 </div>
 <div id="footer">
         <div class="container transparent stitched">
-            <p class="muted credit">Copyright <a href="{{pathFor 'Home'}}">GPDev</a> 2014</p>
+            <p class="muted credit">Copyright <a href="{{pathFor 'home'}}">GPDev</a> 2014</p>
         </div>
 </div>
 </template>
@@ -49,23 +49,8 @@
                 <ul class="nav navbar-nav">
                     {{> navItems}}
                 </ul>
-                <!--    <form class="navbar-form navbar-left">
-                    <input type="text" placeholder="Search" class="form-control col-lg-8">
-                </form> -->
                 <ul class="nav navbar-nav navbar-right">
-                    {{> accountButtons }}
-                    <!--
-                    <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                    </li>
-                    -->
+                    {{> navLogin}}
                 </ul>
             </div>
     </div>
@@ -73,21 +58,60 @@
 </template>
 
 <template name="navBrand">
-<a href="{{pathFor 'Home'}}" class="navbar-brand">Brand ID</a>
+<a href="{{pathFor 'home'}}" class="navbar-brand">Elementum</a>
 </template>
 
 <template name="navItems">
-<li class="{{ isActiveRoute 'Home' }}">
-    <a href="{{pathFor 'Home'}}">
+<li class="{{ isActiveRoute 'home' }}">
+    <a href="{{pathFor 'home'}}">
         Home
     </a>
 </li>
-<li class="{{ isActivePath 'Search' }}"><a href="{{pathFor 'Search'}}">Search</a>
+<!--<li class="{{ isActivePath 'search' }}">
+<a href="{{pathFor 'search'}}">Search</a>
 </li>
-<li class="{{ isActivePath 'Designer' }}"><a href="{{pathFor 'Designer'}}">Designer</a>
+-->
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
+<ul class="dropdown-menu">
+
+    <form class="navbar-form navbar-left input-group">
+        <input type="text" placeholder="Tag" class="form-control col-lg-8">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+    </form> 
+</ul>
 </li>
-<li class="{{ isActivePath 'About' }}"><a href="{{pathFor 'About'}}">About</a>
+<li class="{{ isActivePath 'designer' }}"><a href="{{pathFor 'designer'}}">Design's</a>
 </li>
-<li class="{{ isActivePath 'Contact' }}"><a href="{{pathFor 'Contact'}}">Contact Us</a>
+<li class="{{ isActivePath 'about' }}"><a href="{{pathFor 'about'}}">About</a>
 </li>
+<li class="{{ isActivePath 'contact' }}"><a href="{{pathFor 'contact'}}">Contact Us</a>
+</li>
+</template>
+
+
+
+<template name="navLogin">
+{{#unless currentUser}}
+<li class="{{ isActiveRoute 'signIn' }}">
+    <a href="{{pathFor 'signIn'}}">
+        Sign In
+    </a>
+</li>
+<li class="{{ isActiveRoute 'signUp' }}">
+    <a href="{{pathFor 'signUp'}}">
+        Sign Up
+    </a>
+</li>
+{{else}}
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{#if currentUser}}{{currentUser.username}}{{/if}} <b class="caret"></b></a>
+<ul class="dropdown-menu">
+    <li><a href="#">Requests<span class="badge pull-right">3</span></a></li>
+    <li><a href="{{pathFor 'dashboard'}}">Dashboard</a></li>
+    <li class="divider"></li>
+    <li><a href="/" id="signOut">Sign Out</a></li>
+</ul>
+</li>
+{{/unless}}
 </template>

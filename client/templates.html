@@ -1,14 +1,27 @@
-<template name="Home">
+<template name="home">
 <h2 align="left">Welcome to Elementum.</h2>
+{{> homeAlert}}
 <hr>
-{{>Carousel}}
+{{> Carousel}}
 <hr>
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Are you satisifed with yours? <span class="text-muted"></span></h2>
+            <p class="lead">In this day and age, as a brand, their is little as important as your visibile presence. </p>
+        </div>
+        <div class="col-md-5 col-centered defer-image image-ratio:1:2" style="max-width:300px;max-height:300px">
+                <img src="http://placehold.it/300x300">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
 <div class="row row-centered">
+
     <!-- Three columns of text below the carousel -->
     <h3 align="left"><u>Featured Designs:</u></h3>
     <br>
     <div class="row row-centered" style="margin:0 auto">
-        <div class="col-xs-4 col-centered col-min ">
+        <div class="col-centered col-xs-8 col-md-8 col-lg-3">
             <div class="item2 item2-col">
                 <div class="content">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -18,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-4 col-centered col-min ">
+        <div class="col-centered col-xs-8 col-md-4 col-lg-3">
             <div class="item2 item2-col">
                 <div class="content">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -28,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-4 col-centered col-min">
+        <div class="col-centered col-xs-8 col-md-4 col-lg-3">
             <div class="item2 item2-col">
                 <div class="content">
                     <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -42,20 +55,8 @@
 
 
     <!-- START THE FEATURETTES -->
-
     <hr class="featurette-divider">
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
 
     <div class="row featurette">
         <div class="col-md-5">
@@ -63,7 +64,7 @@
         </div>
         <div class="col-md-7">
             <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">In this day and age, success of a brand is no longer based soley on the quality of product and customer-business interactions. It's becoming increasingly more dependent on it's visible presence and identity. </p>
         </div>
     </div>
 
@@ -95,17 +96,17 @@
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
-            <div class="item active" style="background-image:url(/images/Elegant_Background-1.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+            <div class="item active" style="background-image:url(/images/re_Elegant_Background-1.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
                 <div class="carousel-caption">
                     {{>CarouselSlideOne}}
                 </div>
             </div>
-            <div class="item" style="background-image:url(/images/Elegant_Background-2.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+            <div class="item" style="background-image:url(/images/re_Elegant_Background-2.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
                 <div class="carousel-caption">
                     {{>CarouselSlideTwo}}
                 </div>
             </div>
-            <div class="item" style="background-image:url(/images/Elegant_Background-3.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+            <div class="item" style="background-image:url(/images/re_Elegant_Background-3.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
                 <div class="carousel-caption">
                     {{>CarouselSlideThree}}
                 </div>
@@ -124,34 +125,40 @@
 
 <template name="CarouselSlideOne">
 <div class="row row-centered">
-    <h4 class="lead">Original designs by some of South Africas freshest talent.</h4>
+    <h4 class="lead">Original designs by some of South Africa's freshest talent.</h4>
     <hr>
-    <h5>Connecting university graphics designers with brands in need of a revamp, or maybe just a touch up.</h5>
+    <h5>Connecting university graphics designers with those in need of a 21st century design.</h5>
     <br>
-    <a type="button" href="{{pathFor 'About'}}" class="btn btn-success">Learn</a>
+    <a type="button" href="{{pathFor 'about'}}" class="btn btn-success">Learn</a>
 </div>
 </template>
 
 <template name="CarouselSlideTwo">
 <div class="row row-centered">
-    <br>
-    <p class="lead">Do you know what we do?</p>
     <blockquote style="border-width:0px">
-        <small>It's one click away</small>
+        It’s really hard to design products by focus groups. A lot of times, people don’t know what they want until you show it to them.
+        <small>Steve Jobs</small>
     </blockquote>
-    <div class="row row-centered" style="display:inline">
-        <a type="button" href="{{pathFor 'About'}}" class="btn btn-success">Learn</a>
-    </div>
+    <hr>
+    <p><a href="{{pathFor 'signUp'}}">Prove your talent</a></p>
+
 </div>
 
 </template>
+
 <template name="CarouselSlideThree">
 <div class="row row-centered">
+    <blockquote style="border-width:0px">
+        Every act of creation is first an act of destruction.
+        <small>Pablo Picasso</small>
+    </blockquote>
+    <hr>
+    <p><a href="{{pathFor 'designer'}}">Are you in need of a revamp?</a></p>
 </div>
 
 </template>
 
-<template name="Search">
+<template name="designer">
 <h1>Find the right person for you.</h1>
 <hr>
 <div class="row row-centered">
@@ -230,22 +237,22 @@
 </div>
 </template>
 
-<template name="Designer">
+<template name="search">
 <div class="row">
     <div class="col-md-5 col-md-offset-3">
-        <h1>Designer</h1>
+        <h1>Search</h1>
     </div>
 </div>
 </template>
-<template name="About">
+<template name="about">
 <div class="row center">
-    <!--TODO: DB CALL TO RANDOM IMAGE_SET's -->
+    <!--TODO: DB CALL TO RANDOM IMAGE_SET's 
     <div class="alert alert-dismissable alert-info">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>Heads up!</strong>
         <p>As you read on, have a look at the collections. They are randomly pulled from the database.</p>
-        <p>They made the back button for a reason :)</p>
     </div>
+    -->
     <h1>About</h1>
     <hr>
     <h2>The Mission</h2>
@@ -260,7 +267,7 @@
             <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
         </div>
         <div class="tab-pane fade" id="Business">
-            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+            <p> Consider this for a moment. Think of your brand as a house on the market. Now consider your neighbour is selling theirs for the same price, the difference is in the finish, how it looks and how it feels. Which would you be more likely to invest an outdated one, nothing's broken everything works fine it just hasnt been updated in a long time, or that one from a magazine with that modern finish and sense of uniqueness. You are probably thinking, okay well they wouldnt be listed at the same price. True. So we ask you, would you like to sell your house for less to maintain the competition? The metaphor ends with us, the difference between a house and a brand is that its not going to take hundreds of thousands of Rand to get that look you need, so you dont have to.</p>
         </div>
     </div>
     <hr class="featurette-divider">
@@ -271,17 +278,19 @@
     <hr class="featurette-divider">
     <h3>You've read this far...</h3>
     <br>
+    <!--
     <p class="lead"> As a final note,</p>
     <p>We asked you earlier to look through the collections, as you read down. We asked this because we wouldn't you to see some of the potential thats here. As a student, you could have been one of them, if you have the potential give it a go. Its worth the effort.</p>
     <p> As someone seeking something designed:</p>
+    -->
     <blockquote>
         <h3>"Quality is remembered long after the price is forgotten"</h3>
         <small>Gucci's family motto</small>
     </blockquote>
 </div>
 </template>
-<template name="Contact">
-<div class="jumbotron" style="text-align:left;background-image:url(/images/Elegant_Background-1.jpg);background-size: cover;background-repeat:no-repeat; background-position:25% 25%;">
+<template name="contact">
+<div class="jumbotron jumbocontact" >
 
     <h1 >Your input is important to us.</h1>
     <p class="lead"> Tell us what's on your mind.</p>
@@ -292,7 +301,7 @@
         <h3>Drop us a line!</h3>
         <hr>
         <address>
-            <strong>Email:</strong> <a href="mailto:GPDev@BrandId.com">GPDev@BrandId.com</a><br><br><!--TODO -->
+            <strong>Email:</strong> <a href="mailto:info@Elementum.com">Info@Elementum.com</a><br><br><!--TODO -->
         </address>
     </div>
 
@@ -307,7 +316,7 @@
                 </div>
             </div>
             <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
-            <br />
+            <br>
             <div class="row">
                 {{> captcha}}
             </div>
@@ -321,50 +330,74 @@
     </div>
 </div>
 </template>
-<template name="UserForm">
+<template name="profile">
+</template>
+
+<template name="notFound">
+<div class="row">
+    <div class="col-md-5 col-md-offset-3">
+        <h1>404</h1>
+        <p>Unfortunately for you this page does not exist. Return</p> <!-- TODO: Add return to prev page -->
+    </div>
+</div>
+</template>
+
+<template name="signUp">
 <div class="row row-centered">
     <div class="col-md-6 col-centered">
-        <form class="form-horizontal" action="" method="POST">
+        <form id="registration-form" class="form-horizontal" action="" method="POST">
             <fieldset>
                 <div id="legend">
-                    <legend class="">Register</legend>
+                    <legend>Register</legend>
+                    <p>Already have an account? <a href="{{pathFor 'signIn'}}">Sign In</a></p>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="username">Username</label>
+                    <label class="control-label" for="acc-username">Username</label>
                     <div class="controls">
-                        <input type="text" id="username" name="username" placeholder="" class="form-control">
+                        <input type="text" id="acc-username" name="username" placeholder="" class="form-control">
                         <p class="help-block">Username can contain any letters or numbers, without spaces</p>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="email">E-mail</label>
+                    <label class="control-label" for="acc-email">E-mail</label>
                     <div class="controls">
-                        <input type="email" id="email" name="email" placeholder="" class="form-control">
+                        <input type="text" id="acc-email" name="email" placeholder="" class="form-control">
                         <p class="help-block">Please provide your E-mail</p>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="password">Password</label>
+                    <label class="control-label" for="acc-pwd">Password</label>
                     <div class="controls">
-                        <input type="password" id="password" name="password" placeholder="" class="form-control">
+                        <input type="password" id="acc-pwd" name="password" placeholder="" class="form-control">
                         <p class="help-block">Password should be at least 6 characters</p>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                    <label class="control-label" for="acc-pwd-confirm">Password (Confirm)</label>
                     <div class="controls">
-                        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="form-control">
+                        <input type="password" id="acc-pwd-confirm" name="password_confirm" placeholder="" class="form-control">
                         <p class="help-block">Please confirm password</p>
                     </div>
                 </div>
-
-                <div class="control-group">
+                <div class="checkbox" style="text-align: center;">
+                    <label>
+                        <input type="checkbox" id="pol-check"> I've read and agree to the <a href="{{pathFor 'TandC'}}"> Terms & Conditions </a> and the <a href="{{pathFor 'privacypol'}}">privacy policy</a>.
+                    </label>
+                </div>
+                <br>
+                {{> signUpAlert}}
+                <br>
+                <div align="center">
+                    {{> captcha}}
+                </div>
+                <hr class="featurette">
+                <div class="control-group" style="text-align: center;">
                     <!-- Button -->
                     <div class="controls">
-                        <button class="btn btn-success">Register</button>
+                        <button class="btn btn-primary">Register</button>
                     </div>
                 </div>
             </fieldset>
@@ -373,16 +406,119 @@
 </div>
 </template>
 
-<template name="insertUserForm">
-{{> quickForm collection="User_Data" id="insertUserForm" type="insert" omitFields="_id,createdAt,services,emails.$.verified"}}
+<template name="signIn">
+<div class="row row-centered">
+    <div class="col-md-6 col-centered">
+        <form id="signInForm" class="form-horizontal" action="" method="POST">
+            <fieldset>
+                <div id="legend">
+                    <legend>Sign In</legend>
+                    <p>Don't yet have an account? <a href="{{pathFor 'signUp'}}">Sign Up</a></p>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="email">Email</label>
+                    <div class="controls">
+                        <input type="text" id="email" name="email" placeholder="" class="form-control">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="pwd">Password</label>
+                    <div class="controls">
+                        <input type="password" id="pwd" name="password" placeholder="" class="form-control">
+                    </div>
+                    <p><a href="{{pathFor 'forgotPassword'}}">Oh no! I forgot my password...</a></p>
+                </div>
+                <br>
+                {{> signInAlert}}
+                <hr>
+                <div class="control-group" style="text-align:center">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button class="btn btn-primary">Sign In</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div> 
+</div>
 </template>
 
-
-<template name="notFound">
-<div class="row">
-    <div class="col-md-5 col-md-offset-3">
-        <h1>404</h1>
-        <p>Unfortunately for you this page does not exist. Return</p> <!-- TODO: Add return to prev page -->
+<template name="forgotPassword">
+<div class="row row-centered">
+    <div class="col-md-6 col-centered">
+        <form id="forgotPasswordForm" class="form-horizontal" action="" method="POST">
+            <fieldset>
+                <div id="legend">
+                    <legend>Forgot your password</legend>
+                    <p>Remembered? <a href="{{pathFor 'signIn'}}">Return</a></p>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="email">Email</label>
+                    <div class="controls">
+                        <input class="email form-control" id="forgotPasswordEmail" type="text" name="email" placeholder="Email Address">
+                    </div>
+                </div>
+                <br>
+                {{> fPAlert}}
+                <hr>
+                <div class="control-group" style="text-align:center">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </div>
+</div>
+</template>
+<template name="dashboard">
+<h2>Hello {{currentUser.username}}</h2>
+<hr>
+{{> dashAlert}}
+<div class="defer-image image-ratio:16:9 pull-left" style="margin-right:1em;">
+    <img src="http://placehold.it/350x350">
+</div>
+<div class="col-xs-6 col-md-6 col-lg-6 pull-left" align="left">
+    <h4><u>About:</u></h4>
+    <h5>Location:</h5>
+    <h5>Age:</h5>
+    <h5>Motto:</h5>
+</div>
+
+</template>
+<template name="TandC">
+
+</template>
+<template name="privacypol">
+
+</template>
+
+<template name="homeAlert">
+<div class="homeAlert">
+    {{homeAlert}}
+</div>
+</template>
+
+<template name="signInAlert">
+<div class="signInAlert">
+    {{signInAlert}}
+</div>
+</template>
+
+<template name="signUpAlert">
+<div class="signUpAlert">
+    {{signUpAlert}}
+</div>
+</template>
+
+<template name="dashAlert">
+<div class="dashAlert">
+    {{dashAlert}}
+</div>
+</template>
+<template name="fPAlert">
+<div class="fPAlert">
+    {{fPAlert}}
 </div>
 </template>

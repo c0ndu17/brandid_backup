@@ -1,8 +1,6 @@
 {
   "packages": {
     "iron-router": {},
-    "accounts-merge": {},
-    "accounts-entry": {},
     "contact": {},
     "captcha": {},
     "iron-router-active": {},

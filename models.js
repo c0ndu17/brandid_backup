@@ -4,6 +4,7 @@
 User_Data = new Meteor.Collection('user_data');
 Porfolio = new Meteor.Collection('portfolio');
 Image_Data = new Meteor.Collection('image_data');
+/*
 Schema = {};
 
 Schema.UserCountry = new SimpleSchema({
@@ -63,14 +64,14 @@ Schema.User = new SimpleSchema({
     },
     username: {
         type: String,
-    regEx: /^[a-z0-9A-Z_]{3,15}$/
+        regEx: /^[a-z0-9A-Z_]{3,16}$/
     },
     emails: {
         type: [Object]
     },
     "emails.$.address": {
         type: String,
-    regEx: SimpleSchema.RegEx.Email
+        regEx: SimpleSchema.RegEx.Email
     },
     "emails.$.verified": {
         type: Boolean
@@ -89,4 +90,4 @@ Schema.User = new SimpleSchema({
     }
 });
 
-User_Data.attachSchema(Schema.User);
+User_Data.attachSchema(Schema.User);*/
