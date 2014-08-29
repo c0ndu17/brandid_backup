@@ -5,13 +5,13 @@
 
 standard-app-packages
 collection2
-iron-router
 iron-router-active
 bootstrap-3
 captcha
 spiderable
 glyphicons-halflings
-blaze-layout
 underscore
 jquery
-accounts-entry
+iron-router
+iron-dynamic-template
+accounts-base

@@ -82,6 +82,22 @@ if (Meteor.isClient) {
             return false;
         }
     });
+    
+    Template.designer.rendered = function() {
+        console.log('no longer');
+        var itemWidth = (($('#grid_mason').width())*0.3);
+        console.log('itemWidth: '+ itemWidth);
+        var Selector = document.querySelector('#grid_mason');
+        imagesLoaded( Selector, function () {
+        var msnry = new Masonry( Selector, {
+            itemSelector: '.brand_item',
+            columnWidth: itemWidth,
+            "isFitWidth": true
+        })    
+        });
+        msnry.layout();
+        
+    }
 
     Template.fPAlert.helpers({
         fPAlert: function() {

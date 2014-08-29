@@ -37,6 +37,7 @@ body{
     background: #EEE;
 }
 
+
 /* Image aspect ratios - % is relative to width. */
 .image-ratio\:1x2   > div { padding-top: 200%; }
 .image-ratio\:9x16  > div { padding-top: 177.777%; }
@@ -75,7 +76,6 @@ body{
     vertical-align: middle;
     margin: 0 auto;
     /*
-    margin: 0 auto;
     width:100%;
     display: inline-block;  
     font-size: initial;*/
@@ -160,6 +160,11 @@ body{
 .row-centered {
     text-align:center;
 }
+
+#grid_mason{
+    margin: 0 auto;
+    
+}
 .col-top {
     vertical-align:top;
 }
@@ -211,8 +216,8 @@ body{
 }
 
 .item2 {
-    width:100%;
-    height:100%;
+    /*width:100%;
+    height:100%;*/
     border:1px solid #cecece;
     padding:16px 8px;
 }
@@ -226,6 +231,9 @@ body{
 /* content styles */
 .item2 {
     display:table;
+}
+.brand_item { 
+    width: 25%;
 }
 
 /* content styles */

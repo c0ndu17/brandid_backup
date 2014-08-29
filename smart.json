@@ -1,9 +1,10 @@
 {
   "packages": {
-    "iron-router": {},
     "contact": {},
     "captcha": {},
     "iron-router-active": {},
+    "iron-router": {},
+    "iron-dynamic-template": {},
     "collection2": {},
     "glyphicons-halflings": {},
     "bootstrap-3": {},
